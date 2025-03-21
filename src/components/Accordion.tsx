@@ -5,8 +5,8 @@ type AccordionProps = {
   title: string;
   text: string;
   index: number;
-  active: number;
-  setActive: React.Dispatch<React.SetStateAction<number>>;
+  active: number | null;
+  setActive: React.Dispatch<React.SetStateAction<number | null>>;
 };
 
 export default function Accordion({
@@ -21,7 +21,11 @@ export default function Accordion({
 
   const handleSetVisible = (e: React.MouseEvent) => {
     e.preventDefault();
-    setActive(index);
+    if (active === index) {
+      setActive(null);
+    } else {
+      setActive(index);
+    }
   };
 
   return (

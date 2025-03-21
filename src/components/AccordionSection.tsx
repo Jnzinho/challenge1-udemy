@@ -25,7 +25,7 @@ const AccordionItems = [
 ];
 
 export default function AccordionSection() {
-  const [openedAccordion, setOpenedAccordion] = useState(1);
+  const [openedAccordion, setOpenedAccordion] = useState<number | null>(0);
   return (
     <ul className="flex flex-col gap-5 sm:w-2/4 w-3/4 min-h-60">
       {AccordionItems.map((ai, index) => (

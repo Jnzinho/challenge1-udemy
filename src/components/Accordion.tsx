@@ -1,18 +1,27 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { Plus, Minus } from "lucide-react";
 
 type AccordionProps = {
   title: string;
   text: string;
+  index: number;
+  active: number;
+  setActive: React.Dispatch<React.SetStateAction<number>>;
 };
 
-export default function Accordion({ title, text }: AccordionProps) {
-  const [visible, setVisible] = useState(false);
+export default function Accordion({
+  title,
+  text,
+  index,
+  active,
+  setActive,
+}: AccordionProps) {
+  const visible = index === active;
   const contentRef = useRef<HTMLDivElement>(null);
 
   const handleSetVisible = (e: React.MouseEvent) => {
     e.preventDefault();
-    setVisible(!visible);
+    setActive(index);
   };
 
   return (

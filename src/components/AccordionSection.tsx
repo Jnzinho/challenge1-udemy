@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Accordion from "./Accordion";
 
 const AccordionItems = [
@@ -24,10 +25,17 @@ const AccordionItems = [
 ];
 
 export default function AccordionSection() {
+  const [openedAccordion, setOpenedAccordion] = useState(1);
   return (
     <ul className="flex flex-col gap-5 sm:w-2/4 w-3/4 min-h-60">
-      {AccordionItems.map((ai) => (
-        <Accordion text={ai.text} title={ai.name}></Accordion>
+      {AccordionItems.map((ai, index) => (
+        <Accordion
+          text={ai.text}
+          title={ai.name}
+          index={index}
+          setActive={setOpenedAccordion}
+          active={openedAccordion}
+        ></Accordion>
       ))}
     </ul>
   );

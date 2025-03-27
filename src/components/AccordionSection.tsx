@@ -4,23 +4,23 @@ import Accordion from "./Accordion";
 const AccordionItems = [
   {
     name: "What do you work with?",
-    text: "I work with bleeding edge front end technologies to improve the user experience of a lot of different apps that I design and code myself.",
+    text: "I create websites and web applications with a focus on clean design and smooth user interactions. I handle both the visual design and development process.",
   },
   {
     name: "Do you love what you do?",
-    text: "Yes! I really love developing web applications, I always loved design and solving problems and now I've mixed both in my job.",
+    text: "Absolutely! Web development lets me combine my passion for creative design with problem-solving. Each project brings new and exciting challenges.",
   },
   {
     name: "What technologies do you use?",
-    text: "I use a variety of technologies including React, TypeScript, Tanstack, Tailwind and more to build modern web applications.",
+    text: "I primarily work with React for building user interfaces, along with TypeScript for code reliability. I also use tools like Tailwind CSS for styling and Tanstack for data management and routing.",
   },
   {
     name: "How long have you been developing?",
-    text: "I have been developing web applications for over 3 years, constantly learning and adapting to new technologies.",
+    text: "I've been creating web applications for over 3 years. During this time, I've worked on various projects that have helped me grow as a developer.",
   },
   {
     name: "Do you know back-end development?",
-    text: "Yes, I have worked as a full-stack web developer for the past two years, but I am now specializing in front-end development.",
+    text: "Yes, I spent two years as a full-stack developer working with both front-end and back-end technologies. Currently, I'm focusing on front-end development to create better user experiences.",
   },
 ];
 

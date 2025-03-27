@@ -3,6 +3,7 @@ import DarkModeToggle from "./components/DarkModeToggle";
 import logo from "./assets/logo.png";
 import AccordionSection from "./components/AccordionSection";
 import CardSection from "./components/CardSection";
+import Geolocation from "./components/Geolocation";
 
 function App() {
   const [isDark, setIsDark] = useState(
@@ -23,6 +24,7 @@ function App() {
       <div className="flex flex-col items-center justify-between w-full pb-10">
         <CardSection />
         <AccordionSection></AccordionSection>
+        <Geolocation></Geolocation>
       </div>
     </main>
   );

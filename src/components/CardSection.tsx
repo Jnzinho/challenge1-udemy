@@ -37,9 +37,10 @@ export default function CardSection() {
   return (
     <div className="flex justify-center items-center min-h-[80vh]">
       <Card
-        text="Front end developer with passion for creating beautiful and accessible experiences"
+        text="I build websites that look good and work well for everyone"
         title="Jnzinho"
         pills={skills}
+        location="Chapecó, Brazil"
         image="https://i.pinimg.com/736x/7a/38/84/7a38845d74e0097bcd1f2e394d1404a3.jpg"
       ></Card>
     </div>

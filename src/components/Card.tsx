@@ -1,4 +1,5 @@
 import React from "react";
+import { MapPin } from "lucide-react";
 
 type PillItems = {
   name: string;
@@ -12,9 +13,10 @@ type CardProps = {
   text: string;
   pills?: PillItems[];
   image: string;
+  location?: string;
 };
 
-export default function Card({ title, text, pills, image }: CardProps) {
+export default function Card({ title, text, pills, image, location }: CardProps) {
   const renderedPills =
     pills?.map((p) => {
       return (
@@ -33,10 +35,16 @@ export default function Card({ title, text, pills, image }: CardProps) {
       <section>
         <img src={image} alt="photo" className="fl"></img>
       </section>
-      <section className="p-3 pt-1 flex flex-col gap-2">
-        <h1 className="font-bold text-lg">{title}</h1>
-        <p className="text-sm">{text}</p>
-        <ul className="flex gap-2 text-sm flex-wrap">{renderedPills}</ul>
+      <section className="p-3 pt-1 flex flex-col gap-3">
+        <div className="flex justify-between items-center"> 
+          <h1 className="font-bold text-xl">{title}</h1>
+          <div className="flex gap-1 text-md items-center">
+            <MapPin size={16}></MapPin>
+            <h3>{location}</h3>
+          </div>
+        </div>
+        <p className="text-md">{text}</p>
+        <ul className="flex gap-2 text-md flex-wrap">{renderedPills}</ul>
       </section>
     </article>
   );
